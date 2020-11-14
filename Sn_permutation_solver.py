@@ -127,7 +127,7 @@ def permut_solv(permutation):
         for element in cycle[1:][::-1]:
             transpo.append([fixed,element])
             
-    print('\nProduction of Transpositions')
+    print('\nProduct of Transpositions:')
     print(output_builder([cycle_str(tr) for tr in transpo]))
 
     # calculate order by taking the lcm of all disjoint sets
@@ -149,5 +149,27 @@ def permut_solv(permutation):
     
     return final_disjoint, final_map
 
-permutation = '(1,4,5,6,7,8)(7,9,10,3,2,1)'
-disjoint_cycles, mapping = permut_solv(permutation)
+# Sample run
+
+# permutation = '(1,4,5,6,7,8)(7,9,10,3,2,1)'
+# disjoint_cycles, mapping = permut_solv(permutation)
+
+# Sample Output
+
+
+# Final Mapping:
+# (1,2,3,4,5,6,7,8,9,10)
+# (8,4,2,5,6,7,9,1,10,3)
+
+# Final Disjoint Result:
+# (1,8)(2,4,5,6,7,9,10,3)
+
+# Product of Transpositions:
+# (1,8)(2,3)(2,10)(2,9)(2,7)(2,6)(2,5)(2,4)
+
+# Order:  8
+# Parity: Odd
+
+# INVERSE of permutation: 
+# (1,2,3,4,5,6,7,8,9,10)
+# (8,3,10,2,4,5,6,1,7,9)
